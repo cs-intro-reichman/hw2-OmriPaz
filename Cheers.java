@@ -6,20 +6,20 @@ public class Cheers {
 
             char[] anLetters = {'A', 'E', 'F', 'H', 'I', 'L', 'M', 'N', 'O', 'R', 'S', 'X'};
             for (int i = 0; i < cheer.length(); i++) {
-                String prefix = "a ";
+                String prefix = "a  ";
+                char letterAtI = Character.toUpperCase(cheer.charAt(i));
 
                 for (char letter : anLetters) {
-                        if (letter == cheer.charAt(i)) {
+                        if (letter == letterAtI) {
                                 prefix = "an ";
                         }
                 }
-                char letterToPrint = Character.toUpperCase(cheer.charAt(i));
-                System.out.println("Give me " + prefix + letterToPrint + ": " + letterToPrint + "!");
+                System.out.println("Give me " + prefix + letterAtI + ": " + letterAtI + "!");
 
             }
             System.out.println("What does that spell?");
             for (int i = 1; i <= index; i++) {
-                System.out.println(cheer + "!!!");
+                System.out.println(cheer.toUpperCase() + "!!!");
             }
 
         }
